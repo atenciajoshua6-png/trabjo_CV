@@ -1,0 +1,335 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+   body {
+    margin: 0;
+    padding: 0;
+
+    background-image: url("fondo.gif");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+}
+
+
+/* Contenedor principal */
+
+body > center {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.92);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================
+   TÍTULOS
+   ========================= */
+
+h1 {
+    color: #5b21b6;
+    font-size: 42px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+h1:hover{
+    color: #00ffaa;
+    transform: scale(1.5);
+}
+
+h2 {
+    color: #7c3aed;
+    margin-top: 25px;
+}
+
+h3 {
+    color: #6d28d9;
+    font-size: 24px;
+    margin-top: 25px;
+}
+
+/* =========================
+   LÍNEAS
+   ========================= */
+
+hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(
+        to right,
+        #7c3aed,
+        #00c8ff,
+        #00ffaa
+    );
+    margin: 25px 0;
+    border-radius: 10px;
+}
+
+/* =========================
+   TEXTO
+   ========================= */
+
+p {
+    max-width: 850px;
+    margin: 15px auto;
+    line-height: 1.7;
+    text-align: justify;
+    font-size: 16px;
+}
+
+font[color="purple"] {
+    color: #5b21b6;
+}
+
+/* =========================
+   MENÚ DE NAVEGACIÓN
+   ========================= */
+
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    display: inline-block;
+    margin: 6px;
+    padding: 10px 18px;
+    color: white;
+    background-color: #7c3aed;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #4c1d95;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   FOTO PERSONAL
+   ========================= */
+
+img[src="mi_foto.jpg"] {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 6px solid #7c3aed !important;
+    border-radius: 50%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================
+   TABLA DE HABILIDADES
+   ========================= */
+
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+table th {
+    background-color: #7c3aed;
+    color: white;
+    padding: 12px 20px;
+}
+
+table td {
+    padding: 12px 20px;
+    background-color: #f5f3ff;
+}
+
+table tr:hover td {
+    background-color: #ddd6fe;
+}
+
+/* =========================
+   TABLA DE EMPRESAS
+   ========================= */
+
+table[style*="pink"] {
+    width: 90%;
+    max-width: 900px;
+    background-color: white !important;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+table[style*="pink"] th {
+    background: linear-gradient(
+        135deg,
+        #7c3aed,
+        #2563eb
+    );
+}
+
+table[style*="pink"] td {
+    background-color: #ffffff;
+    color: #333;
+}
+
+table[style*="pink"] td img {
+    width: 150px !important;
+    height: 100px !important;
+    object-fit: contain !important;
+    margin: auto;
+}
+
+/* =========================
+   EFECTO EN LOGOS
+   ========================= */
+
+table[style*="pink"] img {
+    transition: transform 0.3s;
+}
+
+table[style*="pink"] img:hover {
+    transform: scale(1.1);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    body > center {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px auto;
+        width: 90%;
+    }
+
+    table {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+    }
+
+    table[style*="pink"] {
+        overflow-x: auto;
+    }
+}
+
+.presentacion {
+    color: purple !important;
+    cursor: pointer;
+}
+
+.presentacion:hover {
+    color: red !important;
+}
+
+.cuadro-info {
+    width: 90%;
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 25px;
+
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+    text-align: center;
+}
+
+.cuadro-info h3 {
+    color: #5b21b6;
+}
+
+.cuadro-info p {
+    text-align: justify;
+}
+
+.cuadro-info img {
+    width: 500px;
+    height: 500x;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 15px;
+    border: 3px solid white;
+    transition: 0.3s;
+}
+
+.cuadro-info img:hover {
+    transform: scale(1.08);
+}
+
+.marca-agua {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    opacity: 0.15;
+
+    object-fit: cover;
+
+    pointer-events: none;
+}
+.menu-link {
+    color: black;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu-link:hover {
+    color: cyan;
+    text-shadow:
+        0 0 5px cyan,
+        0 0 10px cyan,
+        0 0 20px cyan;
+}
